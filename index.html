@@ -1,0 +1,295 @@
+<index.html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabella Weiler - Creative CV</title>
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFD93D;
+            --text-color: #2C3E50;
+            --bg-color: #F7F7F7;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        .section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: var(--secondary-color);
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+        }
+        .experience-item::before, .education-item::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.5em;
+        }
+        .experience-item h3, .education-item h3 {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        .date {
+            font-style: italic;
+            color: #777;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        .quirky-fact {
+            font-style: italic;
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+        #toggleTheme {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+        #toggleTheme:hover {
+            transform: rotate(15deg);
+        }
+        .dark-mode {
+            --bg-color: #2C3E50;
+            --text-color: #F7F7F7;
+            --primary-color: #FF8C94;
+            --secondary-color: #45B7A0;
+        }
+        .dark-mode .section {
+            background-color: #34495E;
+        }
+        .dark-mode .skill {
+            background-color: var(--primary-color);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+        #cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transition: 0.1s;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div id="cursor"></div>
+    <button id="toggleTheme">🌓</button>
+    <header>
+        <h1>Isabella Weiler</h1>
+        <p class="tagline">Teaching kids to love learning</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Independent Babysitter, Wentzville, MO — Babysitter</h3>
+                <p class="date">2018 - PRESENT</p>
+                <p>Cooking and cleaning for young children, ages ranging from 3-12, as well as helping them learn, playing with them, and keeping them happy and busy while parents were away</p>
+            </div>
+            <div class="experience-item">
+                <h3>Kohls, Wentzville, MO — Sales Associate</h3>
+                <p class="date">June 2021 - June 2022</p>
+                <p>Folding clothes, working registers, cleaning the store, and helping customers have a good experience</p>
+            </div>
+            <div class="experience-item">
+                <h3>Independent Tutor, Wentzville, MO — ACT Tutor</h3>
+                <p class="date">April 2022 - August 2022</p>
+                <p>Helping high school students prepare for the ACT through practice worksheets and tests</p>
+            </div>
+            <div class="experience-item">
+                <h3>Panera, Washington, MO — Cashier, drive through employee, barista</h3>
+                <p class="date">June 2022 - PRESENT</p>
+                <p>Working registers, talking to customers and ensuring a pleasant experience, keeping counters clean, making drinks, keeping dining room/bakery areas clean, and ensuring fast and professional service</p>
+            </div>
+            <div class="experience-item">
+                <h3>Lindenwood Writing Center, St. Charles, MO — Writing tutor</h3>
+                <p class="date">August 2023 - PRESENT</p>
+                <p>Assisting students with drafting, editing, and formatting various genres of papers as well as managing the front desk and ensuring a pleasant, welcoming environment</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Holt High School, Wentzville, MO — High school diploma, GPA 3.8</h3>
+                <p class="date">August 2018 - May 2021</p>
+            </div>
+            <div class="education-item">
+                <h3>St. Charles Community College, Cottleville — 2 semesters, GPA 3.852</h3>
+                <p class="date">August 2021 - May 2022</p>
+            </div>
+            <div class="education-item">
+                <h3>East Central College, Union — 2 semesters, Associates degree in education, GPA 3.922</h3>
+                <p class="date">August 2022-May 2023</p>
+            </div>
+            <div class="education-item">
+                <h3>Lindenwood University, St. Charles — 2 semesters, Working towards a Bachelor's degree in English with a minor in Education, GPA 3.89</h3>
+                <p class="date">August 2023-PRESENT</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Public speaking</span>
+                <span class="skill">Childcare</span>
+                <span class="skill">Customer service</span>
+                <span class="skill">Google skills</span>
+                <span class="skill">Writing</span>
+                <span class="skill">Tutoring</span>
+                <span class="skill">Arts and crafts</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Relevant (Other) Experience</h2>
+            <ul>
+                <li>2 years volunteering at St. Charles Community Library (2017-2019)</li>
+                <li>25 hours of Tutoring Kindergarten students, Journey Elementary (2020-2021)</li>
+                <li>8 hours of Junior Achievement volunteering, 1st Grade, Immanuel Lutheran (2022)</li>
+                <li>8 hours of Junior Achievement volunteering, 4th Grade, Union Central Elementary (2023)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Google Education Certified</li>
+                <li>MSTA Membership</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        const toggleTheme = document.getElementById('toggleTheme');
+        const body = document.body;
+        const cursor = document.getElementById('cursor');
+
+        toggleTheme.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.top = e.pageY + 'px';
+            cursor.style.left = e.pageX + 'px';
+        });
+
+        document.addEventListener('click', () => {
+            cursor.style.transform = 'scale(1.5)';
+            setTimeout(() => {
+                cursor.style.transform = 'scale(1)';
+            }, 500);
+        });
+
+        const skills = document.querySelectorAll('.skill');
+        skills.forEach(skill => {
+            skill.addEventListener('mouseover', () => {
+                skill.style.backgroundColor = getRandomColor();
+            });
+            skill.addEventListener('mouseout', () => {
+                skill.style.backgroundColor = '';
+            });
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
